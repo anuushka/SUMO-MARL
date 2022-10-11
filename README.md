@@ -80,19 +80,13 @@ while not done:
     done = terminated or truncated
 ```
 
-### PettingZoo Multi-Agent API
-See [Petting Zoo API](https://www.pettingzoo.ml/api) for more details.
+@misc{sumorl,
+    author = {Lucas N. Alegre},
+    title = {{SUMO-RL}},
+    year = {2019},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/LucasAlegre/sumo-rl}},
+}
 
-```python
-import sumo_rl
-env = sumo_rl.env(net_file='sumo_net_file.net.xml',
-                  route_file='sumo_route_file.rou.xml',
-                  use_gui=True,
-                  num_seconds=3600)  
-env.reset()
-for agent in env.agent_iter():
-    observation, reward, done, info = env.last()
-    action = policy(observation)
-    env.step(action)
-```
 
